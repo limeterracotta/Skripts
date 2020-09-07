@@ -1,0 +1,7 @@
+command /setitemname to <string>:
+    permission: lt.admin.adminmode
+    executable by: players
+    trigger:
+        if arg-1 is not set:
+            stop
+        set name of player's held item to arg-1

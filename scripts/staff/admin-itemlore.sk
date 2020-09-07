@@ -1,0 +1,7 @@
+command /setitemlore [line <number=1>] to <string>:
+    permission: lt.admin.adminmode
+    executable by: players
+    trigger:
+        if arg-2 is not set:
+            stop
+        set line arg-1 of lore of player's held item to arg-2

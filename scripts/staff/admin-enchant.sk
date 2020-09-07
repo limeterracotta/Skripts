@@ -1,0 +1,5 @@
+command /enchant [with] <enchantment type>:
+    permission: lt.admin
+    executable by: players
+    trigger:
+        enchant the player's held item with arg-1

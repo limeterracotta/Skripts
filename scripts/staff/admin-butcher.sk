@@ -1,0 +1,13 @@
+command /butcher <entity type> [within <number = 10> blocks]:
+    permission: lt.admin
+    executable by: players
+    trigger:
+        set {entity_type} to arg-1
+        set {entities_butchered} to 0
+        loop entities within arg-2 blocks of the player:
+            if loop-entity is arg-1:
+                kill loop-entity
+                set {entities_butchered} to {entities_butchered} + 1
+        message "Removed <light red>%{entities_butchered}%<white> <light green>%{entity_type}%<white>s."
+
+
